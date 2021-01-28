@@ -1,0 +1,31 @@
+Q.1.
+def SumNumber(items):
+    sum=0
+    for x in items:
+        sum=sum+x;
+    return sum
+print(SumNumber([1,2,3,4,5,6,7,8,9]))     
+
+Q.2.
+data={"1":50,"2":60,"3":70}
+Max=max(data,key=data.get)
+print(Max)
+
+Q.3.
+def findMax(arr,n):
+    count=0
+    result=0
+    for i in range(0,n):
+        if(arr[i]==0):
+            count=0
+        else:
+            count=count+1
+            result=max(result,count)
+    return result
+arr=[0,0,0,1,1,1,0,0,0,1,1,0,1,1,1,1,0,0,1,1]
+n=len(arr)
+print(findMax(arr,n))
+         
+Q.4.
+Create table user(username varchar(30), password varchar(16),PRIMARY KEY (username));
+Crete table address(street varchar (20), pincode int(6), country varchar(10), state varchar(10), phone varchar(10), username varchar(20), FOREIGN KEY(username) REFERENCES user(username));
